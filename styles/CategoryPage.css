@@ -1,0 +1,16 @@
+.category-page {
+  padding: 20px;
+  text-align: center;
+}
+
+.category-grid {
+  display: grid;
+  color: black;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 100px;
+  padding: 20px;
+  z-index: 1; /* Ensures the product cards are on top of the video */
+  position: relative;
+  animation: floating 4s ease-in-out infinite;
+}
+
