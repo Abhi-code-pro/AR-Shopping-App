@@ -1,0 +1,118 @@
+
+.app-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Floating Animation */
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+/* Header Styles */
+header {
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 6px rgba(05, 05, 05, 10);
+  animation: floating 3s ease-in-out infinite;
+}
+
+/* Intro Page Styles */
+.intro-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: calc(100vh - 60px); /* Account for the header height */
+  font-family: Arial, sans-serif;
+}
+
+.intro-content {
+  text-align: center;
+}
+
+@keyframes rippleEffect {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) rotate(0deg);
+    filter: blur(10px);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.2) rotate(5deg);
+    filter: blur(3px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+    filter: blur(0);
+  }
+}
+
+.intro-content h1 {
+  font-size: 5rem;
+  font-weight: bold;
+  text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.7);
+  margin-bottom: 20px;
+  color: white;
+  animation: rippleEffect 1.8s ease-out; /* Apply the ripple effect animation */
+  display: inline-block;
+}
+
+
+.intro-content button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: 100px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.intro-content button:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+}
+
+.background-video {
+  position: fixed;
+  top: 0; /* Account for the header height */
+  left: 0;
+  width: 100%;
+  height: calc(100%);
+  object-fit: cover;
+  z-index: -1;
+}
+
+.product-grid {
+  display: grid;
+  color: black;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 100px;
+  padding: 20px;
+  z-index: 1; /* Ensures the product cards are on top of the video */
+  position: relative;
+  animation: floating 4s ease-in-out infinite;
+}
+
+.product-grid > * {
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(05, 05, 05, 10);
+  animation: floating 4s ease-in-out infinite alternate;
+}
+
+

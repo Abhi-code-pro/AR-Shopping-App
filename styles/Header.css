@@ -1,0 +1,53 @@
+/* General header styling */
+.app-header {
+  color: rgb(5, 5, 5); /* White text for contrast */
+  padding: 15px 20px; /* Padding for spacing */
+  display: flex; /* Flexbox layout */
+  justify-content: space-between; /* Space between left and right sections */
+  align-items: center; /* Center items vertically */
+  box-shadow: 0 4px 8px rgba(10, 10, 10, 10); /* Subtle shadow */
+}
+
+/* Left section: Logo and title */
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Space between logo and text */
+}
+
+.logo {
+  width: 60px; /* Set logo size */
+  height: 60px; /* Ensure consistent aspect ratio */
+  border-radius: 50%; /* Make the logo circular, if desired */
+  border: 2px solid white; /* Optional border around logo */
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Right section: Buttons */
+.right-section {
+  display: flex;
+  gap: 15px; /* Space between buttons */
+}
+
+.header-button {
+
+  border-radius: 10px; /* Rounded corners */
+  font-size: 1.4rem;
+  cursor: pointer; /* Pointer cursor on hover */
+  box-shadow: 0 4px 4cap rgba(05, 05, 05, 10); /* Subtle shadow */
+  display: flex;
+}
+
+.header-button:hover {
+  background-color: #2e537b; /* Darker blue on hover */
+}
